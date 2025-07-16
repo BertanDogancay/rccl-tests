@@ -64,4 +64,8 @@ hipError_t ncclVerifiableVerify(
   int64_t *bad_elt_n, cudaStream_t stream
 );
 
+#ifdef NCCL_VERIFIABLE_SELF_TEST
+void ncclVerifiableLaunchSelfTest();
+#endif
+
 #endif
